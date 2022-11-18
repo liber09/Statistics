@@ -84,6 +84,7 @@ increaseQ4 <- ((q4[1]+q4[2])/2+(q4[2]+q4[3])/2+(q4[3]+q4[4])/2+
                  (q4[20]+q4[21])/2+(q4[21]+q4[22])/2+(q4[22]+q4[23])/2+(q4[23]+q4[24])/2+
                  (q4[24]+q4[25])/2+(q4[25]+q4[26])/2+(q4[26]+q4[27])/2)/27
 
+#calculate diff between years for q1
 q1_1_2 <- q1[2]-q1[1]
 q1_2_3 <- q1[3]-q1[2]
 q1_3_4 <- q1[4]-q1[3]
@@ -111,6 +112,54 @@ q1_24_25 <- q1[25]-q1[24]
 q1_25_26 <- q1[26]-q1[25]
 q1_26_27 <- q1[27]-q1[26]
 
+#Add the diff each year to a vector
 increaseEachYearQ1 <- c(q1_1_2,q1_2_3,q1_3_4,q1_4_5,q1_5_6,q1_6_7,q1_7_8,q1_8_9,q1_9_10,q1_10_11,q1_11_12,q1_12_13,q1_13_14,
                         q1_14_15,q1_15_16,q1_16_17,q1_17_18,q1_18_19,q1_19_20,q1_20_21,q1_21_22,q1_22_23,q1_23_24,q1_24_25,
                         q1_25_26,q1_26_27)
+#calculate mean and average increase
+medianIncreaseQ1 <- median(increaseEachYearQ1)
+averageIncreaseQ1 <- mean(increaseEachYearQ1)
+
+#calculate presumed consumption in year 2030 for Q1 using both mean and average method
+presumedConsumption2030Q1MedianMethod <- (medianIncreaseQ1*yearsToAdd)+q1[27]
+presumedConsumption2030Q1AverageMethod <- (averageIncreaseQ1*yearsToAdd)+q1[27]
+
+#calculate diff between years for q2
+q2_1_2 <- q2[2]-q2[1]
+q2_2_3 <- q2[3]-q2[2]
+q2_3_4 <- q2[4]-q2[3]
+q2_4_5 <- q2[5]-q2[4]
+q2_5_6 <- q2[6]-q2[5]
+q2_6_7 <- q2[7]-q2[6]
+q2_7_8 <- q2[8]-q2[7]
+q2_8_9 <- q2[9]-q2[8]
+q2_9_10 <- q2[10]-q2[9]
+q2_10_11 <- q2[11]-q2[10]
+q2_11_12 <- q2[12]-q2[11]
+q2_12_13 <- q2[13]-q2[12]
+q2_13_14 <- q2[14]-q2[13]
+q2_14_15 <- q2[15]-q2[14]
+q2_15_16 <- q2[16]-q2[15]
+q2_16_17 <- q2[17]-q2[16]
+q2_17_18 <- q2[18]-q2[17]
+q2_18_19 <- q2[19]-q2[18]
+q2_19_20 <- q2[20]-q2[19]
+q2_20_21 <- q2[21]-q2[20]
+q2_21_22 <- q2[22]-q2[21]
+q2_22_23 <- q2[23]-q2[22]
+q2_23_24 <- q2[24]-q2[23]
+q2_24_25 <- q2[25]-q2[24]
+q2_25_26 <- q2[26]-q2[25]
+q2_26_27 <- q2[27]-q2[26]
+
+#Add the diff each year to a vector
+increaseEachYearQ2 <- c(q2_1_2,q2_2_3,q2_3_4,q2_4_5,q2_5_6,q2_6_7,q2_7_8,q2_8_9,q2_9_10,q2_10_11,q2_11_12,q2_12_13,q2_13_14,
+                        q2_14_15,q2_15_16,q2_16_17,q2_17_18,q2_18_19,q2_19_20,q2_20_21,q2_21_22,q2_22_23,q2_23_24,q2_24_25,
+                        q2_25_26,q2_26_27)
+#calculate mean and average increase
+medianIncreaseQ2 <- median(increaseEachYearQ2)
+averageIncreaseQ2 <- mean(increaseEachYearQ2)
+
+#calculate presumed consumption in year 2030 for Q2 using both mean and average method
+presumedConsumption2030Q2MedianMethod <- (medianIncreaseQ2*yearsToAdd)+q2[27]
+presumedConsumption2030Q2AverageMethod <- (averageIncreaseQ2*yearsToAdd)+q2[27]
