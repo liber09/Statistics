@@ -9,23 +9,23 @@ for (i in UKgas){
 }
 
 # Get all values for second quarter each year
-q4 <- numeric(0)
+q2 <- numeric(0)
 n <- 4
 counter <- -2
 for (i in UKgas){
   counter = counter+1
   if(counter %% n == 0)
-    q4 <- c(q4,i)
+    q2 <- c(q2,i)
 }
 
 # Get all values for third quarter each year
-q4 <- numeric(0)
+q3 <- numeric(0)
 n <- 4
 counter <- -3
 for (i in UKgas){
   counter = counter+1
   if(counter %% n == 0)
-    q4 <- c(q4,i)
+    q3 <- c(q3,i)
 }
 
 # Get all values for fourth quarter each year
@@ -40,8 +40,8 @@ for (i in UKgas){
 
 #Calculate average for each quarter
 avgQ1 <- mean(q1)
-avgq4 <- mean(q4)
-avgq4 <- mean(q4)
+avgQ2 <- mean(q2)
+avgQ3 <- mean(q3)
 avgQ4 <- mean(q4)
 
 yearToCheck <- 2030
@@ -83,3 +83,34 @@ increaseQ4 <- ((q4[1]+q4[2])/2+(q4[2]+q4[3])/2+(q4[3]+q4[4])/2+
                  (q4[16]+q4[17])/2+(q4[17]+q4[18])/2+(q4[18]+q4[19])/2+(q4[19]+q4[20])/2+
                  (q4[20]+q4[21])/2+(q4[21]+q4[22])/2+(q4[22]+q4[23])/2+(q4[23]+q4[24])/2+
                  (q4[24]+q4[25])/2+(q4[25]+q4[26])/2+(q4[26]+q4[27])/2)/27
+
+q1_1_2 <- q1[2]-q1[1]
+q1_2_3 <- q1[3]-q1[2]
+q1_3_4 <- q1[4]-q1[3]
+q1_4_5 <- q1[5]-q1[4]
+q1_5_6 <- q1[6]-q1[5]
+q1_6_7 <- q1[7]-q1[6]
+q1_7_8 <- q1[8]-q1[7]
+q1_8_9 <- q1[9]-q1[8]
+q1_9_10 <- q1[10]-q1[9]
+q1_10_11 <- q1[11]-q1[10]
+q1_11_12 <- q1[12]-q1[11]
+q1_12_13 <- q1[13]-q1[12]
+q1_13_14 <- q1[14]-q1[13]
+q1_14_15 <- q1[15]-q1[14]
+q1_15_16 <- q1[16]-q1[15]
+q1_16_17 <- q1[17]-q1[16]
+q1_17_18 <- q1[18]-q1[17]
+q1_18_19 <- q1[19]-q1[18]
+q1_19_20 <- q1[20]-q1[19]
+q1_20_21 <- q1[21]-q1[20]
+q1_21_22 <- q1[22]-q1[21]
+q1_22_23 <- q1[23]-q1[22]
+q1_23_24 <- q1[24]-q1[23]
+q1_24_25 <- q1[25]-q1[24]
+q1_25_26 <- q1[26]-q1[25]
+q1_26_27 <- q1[27]-q1[26]
+
+increaseEachYearQ1 <- c(q1_1_2,q1_2_3,q1_3_4,q1_4_5,q1_5_6,q1_6_7,q1_7_8,q1_8_9,q1_9_10,q1_10_11,q1_11_12,q1_12_13,q1_13_14,
+                        q1_14_15,q1_15_16,q1_16_17,q1_17_18,q1_18_19,q1_19_20,q1_20_21,q1_21_22,q1_22_23,q1_23_24,q1_24_25,
+                        q1_25_26,q1_26_27)
