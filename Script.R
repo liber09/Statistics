@@ -37,3 +37,9 @@ for (i in UKgas){
   if(counter %% n == 0)
     q4 <- c(q4,i)
 }
+
+#Calculate average for each quarter
+avgQ1 <- mean(q1)
+avgQ2 <- mean(q2)
+avgQ3 <- mean(q3)
+avgQ4 <- mean(q4)
