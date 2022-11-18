@@ -15,3 +15,12 @@ for (i in UKgas){
   if(counter %% n == 0)
     q1 <- c(q1,i)
 }
+
+q2 <- numeric(0)
+n <- 4
+counter <- -2
+for (i in UKgas){
+  counter = counter+1
+  if(counter %% n == 0)
+    q2 <- c(q2,i)
+}
