@@ -160,6 +160,110 @@ increaseEachYearQ2 <- c(q2_1_2,q2_2_3,q2_3_4,q2_4_5,q2_5_6,q2_6_7,q2_7_8,q2_8_9,
 medianIncreaseQ2 <- median(increaseEachYearQ2)
 averageIncreaseQ2 <- mean(increaseEachYearQ2)
 
-#calculate presumed consumption in year 2030 for Q2 using both mean and average method
+#calculate presumed consumption in year 2030 for Q3 using both mean and average method
 presumedConsumption2030Q2MedianMethod <- (medianIncreaseQ2*yearsToAdd)+q2[27]
 presumedConsumption2030Q2AverageMethod <- (averageIncreaseQ2*yearsToAdd)+q2[27]
+
+#calculate diff between years for q3
+q3_1_2 <- q3[2]-q3[1]
+q3_2_3 <- q3[3]-q3[2]
+q3_3_4 <- q3[4]-q3[3]
+q3_4_5 <- q3[5]-q3[4]
+q3_5_6 <- q3[6]-q3[5]
+q3_6_7 <- q3[7]-q3[6]
+q3_7_8 <- q3[8]-q3[7]
+q3_8_9 <- q3[9]-q3[8]
+q3_9_10 <- q3[10]-q3[9]
+q3_10_11 <- q3[11]-q3[10]
+q3_11_12 <- q3[12]-q3[11]
+q3_12_13 <- q3[13]-q3[12]
+q3_13_14 <- q3[14]-q3[13]
+q3_14_15 <- q3[15]-q3[14]
+q3_15_16 <- q3[16]-q3[15]
+q3_16_17 <- q3[17]-q3[16]
+q3_17_18 <- q3[18]-q3[17]
+q3_18_19 <- q3[19]-q3[18]
+q3_19_20 <- q3[20]-q3[19]
+q3_20_21 <- q3[21]-q3[20]
+q3_21_22 <- q3[22]-q3[21]
+q3_22_23 <- q3[23]-q3[22]
+q3_23_24 <- q3[24]-q3[23]
+q3_24_25 <- q3[25]-q3[24]
+q3_25_26 <- q3[26]-q3[25]
+q3_26_27 <- q3[27]-q3[26]
+
+#Add the diff each year to a vector
+increaseEachYearQ3 <- c(q3_1_2,q3_2_3,q3_3_4,q3_4_5,q3_5_6,q3_6_7,q3_7_8,q3_8_9,q3_9_10,q3_10_11,q3_11_12,q3_12_13,q3_13_14,
+                        q3_14_15,q3_15_16,q3_16_17,q3_17_18,q3_18_19,q3_19_20,q3_20_21,q3_21_22,q3_22_23,q3_23_24,q3_24_25,
+                        q3_25_26,q3_26_27)
+#calculate mean and average increase
+medianIncreaseQ3 <- median(increaseEachYearQ3)
+averageIncreaseQ3 <- mean(increaseEachYearQ3)
+
+#calculate presumed consumption in year 2030 for Q3 using both mean and average method
+presumedConsumption2030Q3MedianMethod <- (medianIncreaseQ3*yearsToAdd)+q3[27]
+presumedConsumption2030Q3AverageMethod <- (averageIncreaseQ3*yearsToAdd)+q3[27]
+
+#calculate diff between years for q4
+q4_1_2 <- q4[2]-q4[1]
+q4_2_3 <- q4[3]-q4[2]
+q4_3_4 <- q4[4]-q4[3]
+q4_4_5 <- q4[5]-q4[4]
+q4_5_6 <- q4[6]-q4[5]
+q4_6_7 <- q4[7]-q4[6]
+q4_7_8 <- q4[8]-q4[7]
+q4_8_9 <- q4[9]-q4[8]
+q4_9_10 <- q4[10]-q4[9]
+q4_10_11 <- q4[11]-q4[10]
+q4_11_12 <- q4[12]-q4[11]
+q4_12_13 <- q4[13]-q4[12]
+q4_13_14 <- q4[14]-q4[13]
+q4_14_15 <- q4[15]-q4[14]
+q4_15_16 <- q4[16]-q4[15]
+q4_16_17 <- q4[17]-q4[16]
+q4_17_18 <- q4[18]-q4[17]
+q4_18_19 <- q4[19]-q4[18]
+q4_19_20 <- q4[20]-q4[19]
+q4_20_21 <- q4[21]-q4[20]
+q4_21_22 <- q4[22]-q4[21]
+q4_22_23 <- q4[23]-q4[22]
+q4_23_24 <- q4[24]-q4[23]
+q4_24_25 <- q4[25]-q4[24]
+q4_25_26 <- q4[26]-q4[25]
+q4_26_27 <- q4[27]-q4[26]
+
+#Add the diff each year to a vector
+increaseEachYearQ4 <- c(q4_1_2,q4_2_3,q4_3_4,q4_4_5,q4_5_6,q4_6_7,q4_7_8,q4_8_9,q4_9_10,q4_10_11,q4_11_12,q4_12_13,q4_13_14,
+                        q4_14_15,q4_15_16,q4_16_17,q4_17_18,q4_18_19,q4_19_20,q4_20_21,q4_21_22,q4_22_23,q4_23_24,q4_24_25,
+                        q4_25_26,q4_26_27)
+#calculate mean and average increase
+medianIncreaseQ4 <- median(increaseEachYearQ4)
+averageIncreaseQ4 <- mean(increaseEachYearQ4)
+
+#calculate presumed consumption in year 2030 for Q4 using both mean and average method
+presumedConsumption2030Q4MedianMethod <- (medianIncreaseQ4*yearsToAdd)+q4[27]
+presumedConsumption2030Q4AverageMethod <- (averageIncreaseQ4*yearsToAdd)+q4[27]
+
+print(paste0("The presumed consumption for year 2030 first quarter using median method would be ", presumedConsumption2030Q1MedianMethod))
+print(paste0("The presumed consumption for year 2030 first quarter using average method would be ", presumedConsumption2030Q1AverageMethod))
+
+print(paste0("The presumed consumption for year 2030 second quarter using median method would be ", presumedConsumption2030Q2MedianMethod))
+print(paste0("The presumed consumption for year 2030 second quarter using average method would be ", presumedConsumption2030Q2AverageMethod))
+
+print(paste0("The presumed consumption for year 2030 third quarter using median method would be ", presumedConsumption2030Q3MedianMethod))
+print(paste0("The presumed consumption for year 2030 third quarter using average method would be ", presumedConsumption2030Q3AverageMethod))
+
+print(paste0("The presumed consumption for year 2030 fourth quarter using median method would be ", presumedConsumption2030Q4MedianMethod))
+print(paste0("The presumed consumption for year 2030 fourth quarter using average method would be ", presumedConsumption2030Q4AverageMethod))
+
+Q1WithNewMean <- append(q1,presumedConsumption2030Q1AverageMethod)
+Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
+
+Q2WithNewMean <- append(q2,presumedConsumption2030Q2AverageMethod)
+Q2WithNewMedian <- append(q2,presumedConsumption2030Q2MedianMethod)
+
+Q3WithNewMean <- append(q3,presumedConsumption2030Q3AverageMethod)
+Q3WithNewMedian <- append(q3,presumedConsumption2030Q3MedianMethod)
+
+Q4WithNewMean <- append(q4,presumedConsumption2030Q4AverageMethod)
+Q4WithNewMedian <- append(q4,presumedConsumption2030Q4MedianMethod)
