@@ -244,26 +244,42 @@ averageIncreaseQ4 <- mean(increaseEachYearQ4)
 presumedConsumption2030Q4MedianMethod <- (medianIncreaseQ4*yearsToAdd)+q4[27]
 presumedConsumption2030Q4AverageMethod <- (averageIncreaseQ4*yearsToAdd)+q4[27]
 
-print(paste0("The presumed consumption for year 2030 first quarter using median method would be ", presumedConsumption2030Q1MedianMethod))
-print(paste0("The presumed consumption for year 2030 first quarter using average method would be ", presumedConsumption2030Q1AverageMethod))
+#Make some printouts
+print(paste("The presumed consumption for year 2030 first quarter using median method would be ", presumedConsumption2030Q1MedianMethod))
+print(paste("The presumed consumption for year 2030 first quarter using average method would be ", presumedConsumption2030Q1AverageMethod))
 
-print(paste0("The presumed consumption for year 2030 second quarter using median method would be ", presumedConsumption2030Q2MedianMethod))
-print(paste0("The presumed consumption for year 2030 second quarter using average method would be ", presumedConsumption2030Q2AverageMethod))
+print(paste("The presumed consumption for year 2030 second quarter using median method would be ", presumedConsumption2030Q2MedianMethod))
+print(paste("The presumed consumption for year 2030 second quarter using average method would be ", presumedConsumption2030Q2AverageMethod))
 
-print(paste0("The presumed consumption for year 2030 third quarter using median method would be ", presumedConsumption2030Q3MedianMethod))
-print(paste0("The presumed consumption for year 2030 third quarter using average method would be ", presumedConsumption2030Q3AverageMethod))
+print(paste("The presumed consumption for year 2030 third quarter using median method would be ", presumedConsumption2030Q3MedianMethod))
+print(paste("The presumed consumption for year 2030 third quarter using average method would be ", presumedConsumption2030Q3AverageMethod))
 
-print(paste0("The presumed consumption for year 2030 fourth quarter using median method would be ", presumedConsumption2030Q4MedianMethod))
-print(paste0("The presumed consumption for year 2030 fourth quarter using average method would be ", presumedConsumption2030Q4AverageMethod))
+print(paste("The presumed consumption for year 2030 fourth quarter using median method would be ", presumedConsumption2030Q4MedianMethod))
+print(paste("The presumed consumption for year 2030 fourth quarter using average method would be ", presumedConsumption2030Q4AverageMethod))
 
-Q1WithNewMean <- append(q1,presumedConsumption2030Q1AverageMethod)
-Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
+#Add new values to existing to get plot
+newValue <- 0
+for(i in yearsToAdd){
+  newValue <- newValue+q1[27]+medianIncreaseQ1
+  Q1WithNewMean <- append(q1,newValue)
+}
+# Q1WithNewMean <- append(q1,presumedConsumption2030Q1AverageMethod)
+# Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
+# 
+# Q2WithNewMean <- append(q2,presumedConsumption2030Q2AverageMethod)
+# Q2WithNewMedian <- append(q2,presumedConsumption2030Q2MedianMethod)
+# 
+# Q3WithNewMean <- append(q3,presumedConsumption2030Q3AverageMethod)
+# Q3WithNewMedian <- append(q3,presumedConsumption2030Q3MedianMethod)
+# 
+# Q4WithNewMean <- append(q4,presumedConsumption2030Q4AverageMethod)
+# Q4WithNewMedian <- append(q4,presumedConsumption2030Q4MedianMethod)
 
-Q2WithNewMean <- append(q2,presumedConsumption2030Q2AverageMethod)
-Q2WithNewMedian <- append(q2,presumedConsumption2030Q2MedianMethod)
+#Plots
+plot(Q1WithNewMean,
+     main = "Gas consumption in UK 1960-2030",
+     xlab = "Year",
+     ylab = "Million therms")
+#plot(Q1WithNewMedian)
 
-Q3WithNewMean <- append(q3,presumedConsumption2030Q3AverageMethod)
-Q3WithNewMedian <- append(q3,presumedConsumption2030Q3MedianMethod)
-
-Q4WithNewMean <- append(q4,presumedConsumption2030Q4AverageMethod)
-Q4WithNewMedian <- append(q4,presumedConsumption2030Q4MedianMethod)
+Q1WithNewMean
