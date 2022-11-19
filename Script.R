@@ -262,7 +262,7 @@ print(paste("The presumed consumption for year 2030 fourth quarter using average
 newValue <- q1[27]
 Q1WithNewMean <- q1
 for(i in 1:yearsToAdd){
-  newValue = newValue+meanIncreaseQ1
+  newValue = newValue+averageIncreaseQ1
   Q1WithNewMean <- c(Q1WithNewMean,newValue)
 }
 
@@ -278,7 +278,7 @@ for(i in 1:yearsToAdd){
 newValue <- q2[27]
 Q2WithNewMean <- q2
 for(i in 1:yearsToAdd){
-  newValue = newValue+meanIncreaseQ2
+  newValue = newValue+averageIncreaseQ2
   Q2WithNewMean <- c(Q2WithNewMean,newValue)
 }
 
@@ -294,7 +294,7 @@ for(i in 1:yearsToAdd){
 newValue <- q3[37]
 Q3WithNewMean <- q3
 for(i in 1:yearsToAdd){
-  newValue = newValue+meanIncreaseQ3
+  newValue = newValue+averageIncreaseQ3
   Q3WithNewMean <- c(Q3WithNewMean,newValue)
 }
 
@@ -310,7 +310,7 @@ for(i in 1:yearsToAdd){
 newValue <- q4[47]
 Q4WithNewMean <- q4
 for(i in 1:yearsToAdd){
-  newValue = newValue+meanIncreaseQ4
+  newValue = newValue+averageIncreaseQ4
   Q4WithNewMean <- c(Q4WithNewMean,newValue)
 }
 
@@ -323,22 +323,37 @@ for(i in 1:yearsToAdd){
 }
 
 
-# Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
-# 
-# Q2WithNewMean <- append(q2,presumedConsumption2030Q2AverageMethod)
-# Q2WithNewMedian <- append(q2,presumedConsumption2030Q2MedianMethod)
-# 
-# Q3WithNewMean <- append(q3,presumedConsumption2030Q3AverageMethod)
-# Q3WithNewMedian <- append(q3,presumedConsumption2030Q3MedianMethod)
-# 
-# Q4WithNewMean <- append(q4,presumedConsumption2030Q4AverageMethod)
-# Q4WithNewMedian <- append(q4,presumedConsumption2030Q4MedianMethod)
 
 #Plots
-ggplot(Q1WithNewMean, 
-     main = "Gas consumption in UK 1960-2030",
-     xlab = "Year",
+plot(Q1WithNewMean, 
+     main = "Gas consumption in UK 1960-2030 Q1 average",
+     xlab = "Years",
      ylab = "Million therms")
-#plot(Q1WithNewMedian)
-
-Q1WithNewMean
+plot(Q1WithNewMedian,
+     main = "Gas consumption in UK 1960-2030 Q1 median",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q2WithNewMean, 
+     main = "Gas consumption in UK 1960-2030 Q2 average",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q2WithNewMedian,
+     main = "Gas consumption in UK 1960-2030 Q2 median",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q3WithNewMean, 
+     main = "Gas consumption in UK 1960-2030 Q3 average",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q3WithNewMedian,
+     main = "Gas consumption in UK 1960-2030 Q3 median",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q4WithNewMean, 
+     main = "Gas consumption in UK 1960-2030 Q4 average",
+     xlab = "Years",
+     ylab = "Million therms")
+plot(Q4WithNewMedian,
+     main = "Gas consumption in UK 1960-2030 Q4 median",
+     xlab = "Years",
+     ylab = "Million therms")
