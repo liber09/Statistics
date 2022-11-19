@@ -291,7 +291,7 @@ for(i in 1:yearsToAdd){
 }
 
 #Q3 mean method
-newValue <- q3[37]
+newValue <- q3[27]
 Q3WithNewMean <- q3
 for(i in 1:yearsToAdd){
   newValue = newValue+averageIncreaseQ3
@@ -299,7 +299,7 @@ for(i in 1:yearsToAdd){
 }
 
 #Q3 median method
-newValue <- q3[37]
+newValue <- q3[27]
 Q3WithNewMedian <- q3
 for(i in 1:yearsToAdd){
   newValue = newValue+medianIncreaseQ3
@@ -307,7 +307,7 @@ for(i in 1:yearsToAdd){
 }
 
 #Q4 mean method
-newValue <- q4[47]
+newValue <- q4[27]
 Q4WithNewMean <- q4
 for(i in 1:yearsToAdd){
   newValue = newValue+averageIncreaseQ4
@@ -315,7 +315,7 @@ for(i in 1:yearsToAdd){
 }
 
 #Q4 median method
-newValue <- q4[47]
+newValue <- q4[27]
 Q4WithNewMedian <- q4
 for(i in 1:yearsToAdd){
   newValue = newValue+medianIncreaseQ4
