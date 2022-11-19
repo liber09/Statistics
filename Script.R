@@ -258,10 +258,11 @@ print(paste("The presumed consumption for year 2030 fourth quarter using median 
 print(paste("The presumed consumption for year 2030 fourth quarter using average method would be ", presumedConsumption2030Q4AverageMethod))
 
 #Add new values to existing to get plot
-newValue <- 0
-for(i in yearsToAdd){
-  newValue <- newValue+q1[27]+medianIncreaseQ1
-  Q1WithNewMean <- append(q1,newValue)
+newValue <- q1[27]
+Q1WithNewMean <- q1
+for(i in 1:yearsToAdd){
+  newValue = newValue+medianIncreaseQ1
+  Q1WithNewMean <- c(Q1WithNewMean,newValue)
 }
 # Q1WithNewMean <- append(q1,presumedConsumption2030Q1AverageMethod)
 # Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
