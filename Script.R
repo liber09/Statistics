@@ -257,14 +257,72 @@ print(paste("The presumed consumption for year 2030 third quarter using average 
 print(paste("The presumed consumption for year 2030 fourth quarter using median method would be ", presumedConsumption2030Q4MedianMethod))
 print(paste("The presumed consumption for year 2030 fourth quarter using average method would be ", presumedConsumption2030Q4AverageMethod))
 
-#Add new values to existing to get plot
+#Add new values to existing to get nicer plot
+#Q1 mean method
 newValue <- q1[27]
 Q1WithNewMean <- q1
 for(i in 1:yearsToAdd){
-  newValue = newValue+medianIncreaseQ1
+  newValue = newValue+meanIncreaseQ1
   Q1WithNewMean <- c(Q1WithNewMean,newValue)
 }
-# Q1WithNewMean <- append(q1,presumedConsumption2030Q1AverageMethod)
+
+#Q1 median method
+newValue <- q1[27]
+Q1WithNewMedian <- q1
+for(i in 1:yearsToAdd){
+  newValue = newValue+medianIncreaseQ1
+  Q1WithNewMedian <- c(Q1WithNewMedian,newValue)
+}
+
+#Q2 mean method
+newValue <- q2[27]
+Q2WithNewMean <- q2
+for(i in 1:yearsToAdd){
+  newValue = newValue+meanIncreaseQ2
+  Q2WithNewMean <- c(Q2WithNewMean,newValue)
+}
+
+#Q2 median method
+newValue <- q2[27]
+Q2WithNewMedian <- q2
+for(i in 1:yearsToAdd){
+  newValue = newValue+medianIncreaseQ2
+  Q2WithNewMedian <- c(Q2WithNewMedian,newValue)
+}
+
+#Q3 mean method
+newValue <- q3[37]
+Q3WithNewMean <- q3
+for(i in 1:yearsToAdd){
+  newValue = newValue+meanIncreaseQ3
+  Q3WithNewMean <- c(Q3WithNewMean,newValue)
+}
+
+#Q3 median method
+newValue <- q3[37]
+Q3WithNewMedian <- q3
+for(i in 1:yearsToAdd){
+  newValue = newValue+medianIncreaseQ3
+  Q3WithNewMedian <- c(Q3WithNewMedian,newValue)
+}
+
+#Q4 mean method
+newValue <- q4[47]
+Q4WithNewMean <- q4
+for(i in 1:yearsToAdd){
+  newValue = newValue+meanIncreaseQ4
+  Q4WithNewMean <- c(Q4WithNewMean,newValue)
+}
+
+#Q4 median method
+newValue <- q4[47]
+Q4WithNewMedian <- q4
+for(i in 1:yearsToAdd){
+  newValue = newValue+medianIncreaseQ4
+  Q4WithNewMedian <- c(Q4WithNewMedian,newValue)
+}
+
+
 # Q1WithNewMedian <- append(q1,presumedConsumption2030Q1MedianMethod)
 # 
 # Q2WithNewMean <- append(q2,presumedConsumption2030Q2AverageMethod)
@@ -277,7 +335,7 @@ for(i in 1:yearsToAdd){
 # Q4WithNewMedian <- append(q4,presumedConsumption2030Q4MedianMethod)
 
 #Plots
-plot(Q1WithNewMean,
+ggplot(Q1WithNewMean, 
      main = "Gas consumption in UK 1960-2030",
      xlab = "Year",
      ylab = "Million therms")
